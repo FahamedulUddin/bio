@@ -1247,7 +1247,7 @@ const voiceStatusText = document.getElementById('voice-status-text');
 const voicePlayIcon = document.getElementById('voice-play-icon');
 const voiceBtnLabel = document.getElementById('voice-btn-label');
 
-const voiceBriefingScript = "Hello. Welcome to the official executive quantum hub of Fahamedul Uddin, also known as Fahim-EL. Entrepreneur, Tech Strategist, and Founder of Eorven Lab. Bridging visionary concepts into powerful digital realities.";
+const voiceBriefingScript = "Welcome. You have reached the official executive hub of Fahamedul Uddin. As a tech entrepreneur and the founder of EORVEN Lab, Fahim focuses on turning high-impact ideas into powerful digital realities. Explore the verified links below to initiate collaboration."";
 
 function toggleVoiceBriefing() {
     sfx.blip();
@@ -1508,6 +1508,50 @@ setInterval(updateMatrixClock, 1000);
 updateMatrixClock();
 
 /**
+<!-- ৪. শেয়ার করার JavaScript ফাংশন -->
+<script>
+async function shareProfile() {
+    const shareData = {
+        title: "Fahamedul Uddin (Fahim-EL)",
+        text: "Official Quantum Profile of Fahamedul Uddin — Founder of EORVEN Lab.",
+        url: window.location.href
+    };
+
+    // মোবাইলে সরাসরি Native Share মেন্যু খুলবে
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+        } catch (err) {
+            // ইউজার শেয়ার বাতিল করলে কোনো এরর দেবে না
+        }
+    } else {
+        // পিসিতে বা ব্রাউজার সাপোর্ট না করলে লিংক কপি করবে
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            triggerShareToast("✓ লিংক ক্লিপবোর্ডে কপি হয়েছে!");
+        } catch (err) {
+            // ব্যাকআপ কপি মেথড
+            const tempInput = document.createElement("input");
+            tempInput.value = window.location.href;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            triggerShareToast("✓ লিংক কপি হয়েছে!");
+        }
+    }
+}
+
+function triggerShareToast(msg) {
+    const toast = document.getElementById("share-toast");
+    toast.textContent = msg;
+    toast.classList.add("active");
+    setTimeout(() => {
+        toast.classList.remove("active");
+    }, 2200);
+}
+</script>
+
  * 8. NATIVE TRANSMIT / SHARE ENGINE
  */
 async function transmitProfile() {
