@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<title>FAHAMEDUL UDDIN</title>
+<title>FAHAMEDUL UDDIN // FAHIM-EL</title>
 <meta name="description" content="Official Ultra-High Tier Neural Identity & Flagship Portfolio of Fahamedul Uddin (Fahim-EL) — Founder & Visionary behind Eorven Lab.">
 <meta name="theme-color" content="#020504">
 
@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800;900&family=JetBrains+Mono:wght@400;600;800&family=Syne:wght@700;800;900&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
 
-<!-- Real QR Code Library (Lightweight & Reliable) -->
+<!-- Real QR Code Library -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
 <style>
@@ -58,8 +58,6 @@ html, body {
     font-family: var(--font-body);
     overflow-x: hidden;
     scroll-behavior: smooth;
-    selection-background-color: var(--neon-green);
-    selection-color: #000;
 }
 
 ::selection {
@@ -68,7 +66,7 @@ html, body {
 }
 
 /* ==========================================================================
-   AMBIENT SCI-FI BACKGROUND & SCANLINES
+   AMBIENT BACKGROUND & SCANLINES
 ========================================================================== */
 #neural-canvas {
     position: fixed;
@@ -229,7 +227,7 @@ html, body {
 }
 
 /* ==========================================================================
-   AI VOICE OVERVIEW BAR (HYPER-TECH VOICE BRIEFING)
+   AI VOICE OVERVIEW BAR
 ========================================================================== */
 .voice-briefing-bar {
     position: relative;
@@ -347,7 +345,6 @@ html, body {
     border-color: var(--glass-border-bright);
 }
 
-/* Interactive Cursor Glow Follower */
 .card-glare {
     position: absolute;
     inset: 0;
@@ -356,7 +353,6 @@ html, body {
     z-index: 1;
 }
 
-/* Holographic Avatar Reactor */
 .avatar-reactor {
     position: relative;
     width: 130px;
@@ -430,7 +426,6 @@ html, body {
     fill: var(--neon-green);
 }
 
-/* Identity Typography */
 .id-name {
     font-family: var(--font-heading);
     font-size: 34px;
@@ -500,7 +495,7 @@ html, body {
 }
 
 /* ==========================================================================
-   FLAGSHIP VENTURE (Eorven Lab)
+   FLAGSHIP VENTURE
 ========================================================================== */
 .flagship-portal {
     position: relative;
@@ -611,7 +606,7 @@ html, body {
 }
 
 /* ==========================================================================
-   NEURAL NODE MATRIX (SOCIAL TILES)
+   NEURAL NODE MATRIX
 ========================================================================== */
 .matrix-section-title {
     font-family: var(--font-mono);
@@ -738,7 +733,7 @@ html, body {
 }
 
 /* ==========================================================================
-   MINI DOCK (QUICK ACTION MATRIX)
+   MINI QUICK DOCK
 ========================================================================== */
 .bottom-dock {
     display: flex;
@@ -784,7 +779,7 @@ html, body {
 }
 
 /* ==========================================================================
-   FOOTER TELEMETRY
+   FOOTER
 ========================================================================== */
 .footer-telemetry {
     text-align: center;
@@ -800,7 +795,7 @@ html, body {
 }
 
 /* ==========================================================================
-   REAL QR CODE MODAL WITH SCANNER LASER
+   MODAL & TOAST
 ========================================================================== */
 .modal-backdrop {
     position: fixed;
@@ -863,7 +858,6 @@ html, body {
     border-radius: 6px;
 }
 
-/* Scanning Neon Laser Sweep */
 .qr-laser-line {
     position: absolute;
     top: 0;
@@ -902,9 +896,6 @@ html, body {
     box-shadow: 0 0 20px rgba(0, 255, 157, 0.4);
 }
 
-/* ==========================================================================
-   NOTIFICATION TOAST
-========================================================================== */
 .cyber-toast {
     position: fixed;
     bottom: 30px;
@@ -932,49 +923,31 @@ html, body {
     transform: translate(-50%, 0);
 }
 
-/* ==========================================================================
-   RESPONSIVE OPTIMIZATIONS
-========================================================================== */
 @media (max-width: 480px) {
-    .viewport {
-        padding: 16px 14px 50px;
-    }
-    .id-name {
-        font-size: 28px;
-    }
-    .identity-card {
-        padding: 30px 18px 24px;
-    }
-    .flagship-portal {
-        padding: 18px;
-    }
-    .flagship-icon-core {
-        width: 48px;
-        height: 48px;
-        font-size: 24px;
-    }
+    .viewport { padding: 16px 14px 50px; }
+    .id-name { font-size: 28px; }
+    .identity-card { padding: 30px 18px 24px; }
+    .flagship-portal { padding: 18px; }
+    .flagship-icon-core { width: 48px; height: 48px; font-size: 24px; }
 }
 </style>
 </head>
 
 <body>
 
-<!-- NEURAL BACKGROUND PARTICLES -->
 <canvas id="neural-canvas"></canvas>
-
-<!-- SCANLINES & AMBIENT GLOW -->
 <div class="scanlines"></div>
 <div class="ambient-flare one"></div>
 <div class="ambient-flare two"></div>
 
-<!-- MAIN VIEWPORT -->
 <main class="viewport">
 
     <!-- TOP TELEMETRY HUD -->
     <header class="hud-bar">
         <div class="hud-status">
             <span class="hud-ping"></span>
-            <span id="matrix-clock">00:00:00 UTC</span>
+            <!-- GMT+6 Clock -->
+            <span id="matrix-clock">00:00:00 GMT+6</span>
         </div>
         <div class="hud-controls">
             <!-- Audio Sound FX Toggle -->
@@ -986,7 +959,7 @@ html, body {
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
             </button>
             <!-- Native Transmit/Share -->
-            <button class="hud-btn" id="transmit-btn" title="Transmit Profile" aria-label="Share Link">
+            <button class="hud-btn" id="transmit-btn" onclick="shareProfile()" title="Transmit Profile" aria-label="Share Link">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
             </button>
         </div>
@@ -1017,7 +990,6 @@ html, body {
         <section class="identity-card" id="holo-card">
             <div class="card-glare"></div>
 
-            <!-- Avatar Reactor -->
             <div class="avatar-reactor">
                 <div class="avatar-orbit-outer"></div>
                 <div class="avatar-orbit-conic"></div>
@@ -1029,7 +1001,6 @@ html, body {
                 </div>
             </div>
 
-            <!-- Titles & Scramble Text -->
             <h1 class="id-name" data-scramble="Fahamedul Uddin">Fahamedul Uddin</h1>
             
             <div class="id-alias-badge">
@@ -1041,7 +1012,6 @@ html, body {
                 <strong>Entrepreneur & Digital Creator</strong>. Engineering next-generation brands, hyper-scale digital experiences, and scalable web architectures.
             </p>
 
-            <!-- Specialization Badges -->
             <div class="spec-matrix">
                 <span class="spec-badge">#ENTREPRENEUR</span>
                 <span class="spec-badge">#TECH_STRATEGIST</span>
@@ -1051,7 +1021,7 @@ html, body {
         </section>
     </div>
 
-    <!-- FLAGSHIP VENTURE: Eorven Lab-->
+    <!-- FLAGSHIP VENTURE: Eorven Lab -->
     <a class="flagship-portal" href="https://eorven.top/" target="_blank" rel="noopener noreferrer" id="flagship-card">
         <div class="flagship-icon-core">◈</div>
         <div class="flagship-body">
@@ -1224,7 +1194,6 @@ class SoundEngine {
 }
 const sfx = new SoundEngine();
 
-// SFX Toggle
 const sfxBtn = document.getElementById('sfx-toggle');
 sfxBtn.addEventListener('click', () => {
     sfx.enabled = !sfx.enabled;
@@ -1234,10 +1203,9 @@ sfxBtn.addEventListener('click', () => {
 });
 
 /**
- * 2. AI VOICE BRIEFING ASSISTANT (Web Speech API + Custom External Audio Hook)
- * NOTE: If you record your own voice MP3, just replace customVoiceAudioSrc with the MP3 URL!
+ * 2. AI VOICE BRIEFING ASSISTANT
  */
-const customVoiceAudioSrc = ""; // Put your MP3 URL here if you want custom audio, e.g. "https://example.com/voice.mp3"
+const customVoiceAudioSrc = "";
 let externalAudio = null;
 let isSpeaking = false;
 
@@ -1247,12 +1215,11 @@ const voiceStatusText = document.getElementById('voice-status-text');
 const voicePlayIcon = document.getElementById('voice-play-icon');
 const voiceBtnLabel = document.getElementById('voice-btn-label');
 
-const voiceBriefingScript = "Welcome. You have reached the official executive hub of Fahamedul Uddin. As a tech entrepreneur and the founder of EORVEN Lab, Fahim focuses on turning high-impact ideas into powerful digital realities. Explore the verified links below to initiate collaboration."";
+const voiceBriefingScript = "Welcome. You have reached the official executive hub of Fahamedul Uddin. As a tech entrepreneur and the founder of EORVEN Lab, Fahim focuses on turning high-impact ideas into powerful digital realities. Explore the verified links below to initiate collaboration.";
 
 function toggleVoiceBriefing() {
     sfx.blip();
     
-    // If Custom Audio MP3 is provided
     if (customVoiceAudioSrc) {
         if (!externalAudio) {
             externalAudio = new Audio(customVoiceAudioSrc);
@@ -1269,7 +1236,6 @@ function toggleVoiceBriefing() {
         return;
     }
 
-    // Default: High-Tech Web Speech Synthesizer
     if (!('speechSynthesis' in window)) {
         showToast("SPEECH SYNTHESIZER NOT SUPPORTED");
         return;
@@ -1279,16 +1245,15 @@ function toggleVoiceBriefing() {
         window.speechSynthesis.cancel();
         resetVoiceUI();
     } else {
-        window.speechSynthesis.cancel(); // Clear queue
+        window.speechSynthesis.cancel();
         const utterance = new SpeechSynthesisUtterance(voiceBriefingScript);
         
-        // Find best robotic/English voice
         const voices = window.speechSynthesis.getVoices();
         const techVoice = voices.find(v => v.lang.includes('en') && (v.name.includes('Google') || v.name.includes('Natural') || v.name.includes('Samantha') || v.name.includes('Daniel'))) || voices[0];
         if (techVoice) utterance.voice = techVoice;
         
-        utterance.pitch = 0.95; // Tech vibe pitch
-        utterance.rate = 1.02;  // Fluent speed
+        utterance.pitch = 0.95;
+        utterance.rate = 1.02;
 
         utterance.onstart = () => setVoiceUIPlaying();
         utterance.onend = () => resetVoiceUI();
@@ -1318,7 +1283,7 @@ function resetVoiceUI() {
 voicePlayBtn.addEventListener('click', toggleVoiceBriefing);
 
 /**
- * 3. 3D GYROSCOPIC / MOUSE TILT PHYSICS
+ * 3. 3D GYROSCOPIC TILT
  */
 const holoCard = document.getElementById('holo-card');
 const cardWrapper = document.querySelector('.identity-card-wrapper');
@@ -1349,7 +1314,7 @@ cardWrapper.addEventListener('touchmove', handleCardMove, { passive: true });
 cardWrapper.addEventListener('touchend', resetCardTilt);
 
 /**
- * 4. REAL FUNCTIONAL SCANNER QR CODE GENERATOR
+ * 4. REAL QR CODE GENERATOR
  */
 let qrCodeInstance = null;
 const qrModal = document.getElementById('qr-modal');
@@ -1389,7 +1354,7 @@ qrModal.addEventListener('click', (e) => {
 });
 
 /**
- * 5. MATRIX TEXT DECODER / SCRAMBLER EFFECT
+ * 5. SCRAMBLER TEXT EFFECT
  */
 const cipherChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*";
 document.querySelectorAll('[data-scramble]').forEach(el => {
@@ -1412,7 +1377,7 @@ document.querySelectorAll('[data-scramble]').forEach(el => {
 });
 
 /**
- * 6. INTERACTIVE NEURAL PARTICLE WEB (HTML5 Canvas)
+ * 6. NEURAL CANVAS PARTICLES
  */
 const canvas = document.getElementById('neural-canvas');
 const ctx = canvas.getContext('2d');
@@ -1495,14 +1460,19 @@ function renderNeuralCanvas() {
 renderNeuralCanvas();
 
 /**
- * 7. LIVE UTC TELEMETRY CLOCK
+ * 7. LIVE GMT+6 (BANGLADESH TIME) TELEMETRY CLOCK
  */
 function updateMatrixClock() {
     const now = new Date();
-    const h = String(now.getUTCHours()).padStart(2, '0');
-    const m = String(now.getUTCMinutes()).padStart(2, '0');
-    const s = String(now.getUTCSeconds()).padStart(2, '0');
-    document.getElementById('matrix-clock').textContent = `${h}:${m}:${s} UTC`;
+    const options = {
+        timeZone: 'Asia/Dhaka',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    };
+    const timeFormatted = new Intl.DateTimeFormat('en-GB', options).format(now);
+    document.getElementById('matrix-clock').textContent = `${timeFormatted} GMT+6`;
 }
 setInterval(updateMatrixClock, 1000);
 updateMatrixClock();
@@ -1510,6 +1480,34 @@ updateMatrixClock();
 /**
  * 8. NATIVE TRANSMIT / SHARE ENGINE
  */
+async function shareProfile() {
+    sfx.blip();
+    const shareData = {
+        title: "Fahamedul Uddin (Fahim-EL)",
+        text: "Official Quantum Profile of Fahamedul Uddin — Founder of Eorven Lab.",
+        url: window.location.href
+    };
+
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+        } catch (err) {}
+    } else {
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            showToast("LINK COPIED TO CLIPBOARD");
+        } catch (err) {
+            const tempInput = document.createElement("input");
+            tempInput.value = window.location.href;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            showToast("LINK COPIED TO CLIPBOARD");
+        }
+    }
+}
+
 /**
  * 9. TOAST NOTIFICATIONS
  */
@@ -1525,111 +1523,6 @@ document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('mouseenter', () => sfx.hover());
     el.addEventListener('click', () => sfx.blip());
 });
-</script>
-<!-- ১. শেয়ার বাটন HTML -->
-<button class="share-btn" onclick="shareProfile()" aria-label="Share Profile">
-    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="18" cy="5" r="3"></circle>
-        <circle cx="6" cy="12" r="3"></circle>
-        <circle cx="18" cy="19" r="3"></circle>
-        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
-        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
-    </svg>
-</button>
-
-<!-- ২. লিংক কপি হওয়ার নোটিফিকেশন টোস্ট -->
-<div id="share-toast" class="share-toast">✓ প্রোফাইল লিংক কপি করা হয়েছে!</div>
-
-<!-- ৩. শেয়ার বাটন ও টোস্ট এর CSS -->
-<style>
-.share-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(0, 255, 157, 0.3);
-    color: #fff;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.share-btn:hover {
-    background: #00ff9d;
-    color: #000;
-    box-shadow: 0 0 15px rgba(0, 255, 157, 0.5);
-    transform: translateY(-2px);
-}
-
-.share-toast {
-    position: fixed;
-    bottom: 25px;
-    left: 50%;
-    transform: translate(-50%, 50px);
-    background: #061811;
-    border: 1px solid #00ff9d;
-    color: #00ff9d;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 13px;
-    font-weight: 600;
-    opacity: 0;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    z-index: 9999;
-    box-shadow: 0 0 20px rgba(0, 255, 157, 0.3);
-}
-
-.share-toast.active {
-    opacity: 1;
-    transform: translate(-50%, 0);
-}
-</style>
-
-<!-- ৪. শেয়ার করার JavaScript ফাংশন -->
-<script>
-async function shareProfile() {
-    const shareData = {
-        title: "Fahamedul Uddin (Fahim-EL)",
-        text: "Official Quantum Profile of Fahamedul Uddin — Founder of EORVEN Lab.",
-        url: window.location.href
-    };
-
-    // মোবাইলে সরাসরি Native Share মেন্যু খুলবে
-    if (navigator.share) {
-        try {
-            await navigator.share(shareData);
-        } catch (err) {
-            // ইউজার শেয়ার বাতিল করলে কোনো এরর দেবে না
-        }
-    } else {
-        // পিসিতে বা ব্রাউজার সাপোর্ট না করলে লিংক কপি করবে
-        try {
-            await navigator.clipboard.writeText(window.location.href);
-            triggerShareToast("✓ লিংক ক্লিপবোর্ডে কপি হয়েছে!");
-        } catch (err) {
-            // ব্যাকআপ কপি মেথড
-            const tempInput = document.createElement("input");
-            tempInput.value = window.location.href;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand("copy");
-            document.body.removeChild(tempInput);
-            triggerShareToast("✓ লিংক কপি হয়েছে!");
-        }
-    }
-}
-
-function triggerShareToast(msg) {
-    const toast = document.getElementById("share-toast");
-    toast.textContent = msg;
-    toast.classList.add("active");
-    setTimeout(() => {
-        toast.classList.remove("active");
-    }, 2200);
-}
 </script>
 </body>
 </html>
