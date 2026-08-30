@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Fahamedul Uddin — Fahim-EL</title>
+<meta name="description" content="Official personal portfolio and connect hub of Fahamedul Uddin (Fahim-EL) — Founder of Eorven Lab.">
+<meta name="theme-color" content="#0a0f0d">
+
+<!-- Google Fonts: Modern & Editorial -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+<!-- Real Scannable QR Code Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+<style>
+/* ==========================================================================
+   MINIMAL LUXURY DESIGN SYSTEM
+========================================================================== */
+:root {
+    --bg-main: #080c0a;
+    --card-bg: rgba(18, 26, 22, 0.55);
+    --card-hover: rgba(26, 38, 32, 0.7);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --border-accent: rgba(0, 255, 157, 0.3);
+    
+    --accent: #00ff9d;
+    --accent-glow: rgba(0, 255, 157, 0.25);
+    
+    --text-main: #ffffff;
+    --text-muted: #95a39d;
+    --text-dim: #5e6e66;
+    
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    
+    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Ambient Radial Glows (Warm & Refined) */
+.ambient-glow {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(120px);
+}
+
+.ambient-glow.top {
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 255, 157, 0.12), transparent 70%);
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.ambient-glow.bottom {
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(0, 220, 255, 0.08), transparent 70%);
+    bottom: 0;
+    right: -50px;
+}
+
+/* ==========================================================================
+   PAGE CONTAINER
+========================================================================== */
+.container {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 540px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+/* ==========================================================================
+   TOP BAR (Location & Status + Actions)
+========================================================================== */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.location-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 10px var(--accent);
+}
+
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.action-btn {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    outline: none;
+}
+
+.action-btn:hover {
+    background: var(--accent);
+    color: #000;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+/* ==========================================================================
+   HERO PROFILE CARD
+========================================================================== */
+.profile-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 28px;
+    padding: 36px 24px 28px;
+    text-align: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    transition: var(--transition);
+}
+
+.profile-card:hover {
+    border-color: rgba(255, 255, 255, 0.14);
+}
+
+/* Elegant Avatar Frame */
+.avatar-frame {
+    position: relative;
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 20px;
+}
+
+.avatar-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    padding: 3px;
+    background: #111a15;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.verified-pill {
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    background: #00ff9d;
+    color: #000;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--bg-main);
+}
+
+.verified-pill svg {
+    width: 12px;
+    height: 12px;
+    fill: #000;
+}
+
+.profile-name {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.profile-handle {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 14px;
+    letter-spacing: 0.02em;
+}
+
+.profile-bio {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    max-width: 420px;
+    margin: 0 auto 20px;
+}
+
+.profile-bio strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tag-pill {
+    font-size: 11.5px;
+    font-weight: 500;
+    padding: 6px 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+    color: #a4b3ac;
+}
+
+/* ==========================================================================
+   PERSONAL VOICE NOTE PLAYER
+========================================================================== */
+.voice-note-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 18px;
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%);
+    border: 1px solid var(--border-accent);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.voice-note-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.waveform {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    height: 20px;
+}
+
+.waveform-bar {
+    width: 3px;
+    height: 100%;
+    background: var(--accent);
+    border-radius: 3px;
+    transform: scaleY(0.25);
+    transition: transform 0.2s;
+}
+
+.voice-note-card.playing .waveform-bar:nth-child(1) { animation: waveAnim 0.8s infinite 0.1s ease-in-out; }
+.voice-note-card.playing .waveform-bar:nth-child(2) { animation: waveAnim 0.8s infinite 0.3s ease-in-out; }
+.voice-note-card.playing .waveform-bar:nth-child(3) { animation: waveAnim 0.8s infinite 0.2s ease-in-out; }
+.voice-note-card.playing .waveform-bar:nth-child(4) { animation: waveAnim 0.8s infinite 0.4s ease-in-out; }
+
+@keyframes waveAnim {
+    0%, 100% { transform: scaleY(0.25); }
+    50% { transform: scaleY(1); }
+}
+
+.voice-note-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.voice-note-sub {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.voice-play-trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    background: var(--accent);
+    color: #000;
+    border: none;
+    font-size: 12px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    outline: none;
+}
+
+.voice-play-trigger:hover {
+    transform: scale(1.04);
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+/* ==========================================================================
+   FLAGSHIP VENTURE (Eorven Lab)
+========================================================================== */
+.flagship-link {
+    position: relative;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, rgba(0, 255, 157, 0.12) 0%, rgba(18, 26, 22, 0.7) 100%);
+    border: 1px solid var(--border-accent);
+    border-radius: 24px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: var(--transition);
+}
+
+.flagship-link:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 35px rgba(0, 255, 157, 0.15);
+}
+
+.flagship-logo {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: var(--accent);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: 800;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.flagship-info {
+    flex-grow: 1;
+}
+
+.flagship-badge {
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 2px;
+}
+
+.flagship-heading {
+    font-family: var(--font-heading);
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.flagship-desc {
+    font-size: 12.5px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.flagship-arrow {
+    font-size: 20px;
+    color: var(--accent);
+    margin-left: 12px;
+    transition: var(--transition);
+}
+
+.flagship-link:hover .flagship-arrow {
+    transform: translateX(3px) translateY(-3px);
+}
+
+/* ==========================================================================
+   SOCIAL LINKS
+========================================================================== */
+.section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin: 6px 4px -6px;
+}
+
+.links-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.link-card {
+    display: flex;
+    align-items: center;
+    padding: 14px 18px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 20px;
+    text-decoration: none;
+    color: #fff;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: var(--transition);
+}
+
+.link-card:hover {
+    transform: translateX(4px);
+    background: var(--card-hover);
+    border-color: rgba(255, 255, 255, 0.16);
+}
+
+.link-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+
+.link-icon-wrap svg {
+    width: 20px;
+    height: 20px;
+    fill: #fff;
+}
+
+.link-card:hover .link-icon-wrap {
+    background: #fff;
+}
+
+.link-card:hover .link-icon-wrap svg {
+    fill: #000;
+}
+
+.link-texts {
+    flex-grow: 1;
+}
+
+.link-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.link-handle {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+.link-arrow {
+    font-size: 18px;
+    color: var(--text-dim);
+    transition: var(--transition);
+}
+
+.link-card:hover .link-arrow {
+    color: #fff;
+    transform: translateX(3px);
+}
+
+/* ==========================================================================
+   MINI SOCIAL BAR
+========================================================================== */
+.social-dock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+    width: fit-content;
+    margin: 8px auto 0;
+}
+
+.social-dock a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--border-subtle);
+    transition: var(--transition);
+}
+
+.social-dock a svg {
+    width: 17px;
+    height: 17px;
+    fill: currentColor;
+}
+
+.social-dock a:hover {
+    background: var(--accent);
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px var(--accent-glow);
+}
+
+/* ==========================================================================
+   FOOTER
+========================================================================== */
+.footer-text {
+    text-align: center;
+    font-size: 12px;
+    color: var(--text-dim);
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+.footer-text strong {
+    color: var(--text-muted);
+}
+
+/* ==========================================================================
+   ELEGANT QR MODAL
+========================================================================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.modal-content {
+    background: #111a15;
+    border: 1px solid var(--border-subtle);
+    border-radius: 28px;
+    padding: 32px 24px;
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    transform: scale(0.95);
+    transition: transform 0.3s var(--transition);
+}
+
+.modal-overlay.active .modal-content {
+    transform: scale(1);
+}
+
+.qr-box {
+    background: #ffffff;
+    padding: 16px;
+    border-radius: 20px;
+    display: inline-block;
+    margin: 20px 0 16px;
+}
+
+.qr-box #qrcode {
+    display: flex;
+    justify-content: center;
+}
+
+.modal-close {
+    width: 100%;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-subtle);
+    color: #fff;
+    border-radius: 14px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.modal-close:hover {
+    background: #fff;
+    color: #000;
+}
+
+/* ==========================================================================
+   TOAST
+========================================================================== */
+.toast-msg {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, 40px);
+    background: #16241d;
+    border: 1px solid var(--accent);
+    color: #fff;
+    padding: 10px 22px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+    z-index: 999;
+}
+
+.toast-msg.show {
+    opacity: 1;
+    transform: translate(-50%, 0);
+}
+</style>
+</head>
+
+<body>
+
+<!-- Subtle Ambient Backing -->
+<div class="ambient-glow top"></div>
+<div class="ambient-glow bottom"></div>
+
+<main class="container">
+
+    <!-- TOP BAR: Location & Clock (GMT+6) + Share & QR -->
+    <header class="top-bar">
+        <div class="location-badge">
+            <span class="status-dot"></span>
+            <span id="gmt-clock">Dhaka • 00:00:00 (GMT+6)</span>
+        </div>
+        <div class="action-buttons">
+            <!-- QR Modal Button -->
+            <button class="action-btn" id="qr-trigger-btn" title="Scan QR Code" aria-label="Open QR Code">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+            </button>
+            <!-- Native Share Button -->
+            <button class="action-btn" onclick="shareProfile()" title="Share Profile" aria-label="Share Link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO PROFILE CARD -->
+    <section class="profile-card">
+        <div class="avatar-frame">
+            <!-- Your Real Profile Picture -->
+            <img src="https://i.ibb.co.com/PvDD755C/IMG-20260830-135019-997.jpg" alt="Fahamedul Uddin" id="avatar-img">
+            <div class="verified-pill" title="Verified Creator">
+                <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+            </div>
+        </div>
+
+        <h1 class="profile-name">Fahamedul Uddin</h1>
+        <div class="profile-handle">@fahim_el</div>
+
+        <p class="profile-bio">
+            <strong>Entrepreneur & Digital Creator</strong>. Founder at Eorven Lab. Focused on building scalable web products, impactful brand identities, and modern digital experiences.
+        </p>
+
+        <div class="tag-list">
+            <span class="tag-pill">Founder</span>
+            <span class="tag-pill">Tech Strategist</span>
+            <span class="tag-pill">Student</span>
+            <span class="tag-pill">Digital Creator</span>
+        </div>
+    </section>
+
+    <!-- NATURAL PERSONAL VOICE NOTE -->
+    <section class="voice-note-card" id="voice-card">
+        <div class="voice-note-left">
+            <div class="waveform">
+                <div class="waveform-bar"></div>
+                <div class="waveform-bar"></div>
+                <div class="waveform-bar"></div>
+                <div class="waveform-bar"></div>
+            </div>
+            <div>
+                <div class="voice-note-title">Voice Note from Fahim</div>
+                <div class="voice-note-sub" id="voice-status-text">15s Audio Introduction</div>
+            </div>
+        </div>
+        <button class="voice-play-trigger" id="voice-btn">
+            <span id="voice-icon">▶</span>
+            <span id="voice-btn-text">Listen</span>
+        </button>
+    </section>
+
+    <!-- FLAGSHIP VENTURE: Eorven Lab -->
+    <a class="flagship-link" href="https://eorven.top/" target="_blank" rel="noopener noreferrer">
+        <div class="flagship-logo">◈</div>
+        <div class="flagship-info">
+            <div class="flagship-badge">Featured Venture</div>
+            <div class="flagship-heading">Eorven Lab</div>
+            <div class="flagship-desc">Digital Service Agency & Innovation Studio</div>
+        </div>
+        <div class="flagship-arrow">↗</div>
+    </a>
+
+    <!-- DIRECT CONNECT LINKS -->
+    <div class="section-title">Connect & Follow</div>
+
+    <section class="links-stack">
+
+        <!-- X (Twitter) -->
+        <a class="link-card" href="https://x.com/fahamedul_uddin" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </div>
+            <div class="link-texts">
+                <div class="link-title">X (Twitter)</div>
+                <div class="link-handle">@fahamedul_uddin</div>
+            </div>
+            <div class="link-arrow">›</div>
+        </a>
+
+        <!-- WhatsApp -->
+        <a class="link-card" href="https://wa.me/fahameduluddin" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+            </div>
+            <div class="link-texts">
+                <div class="link-title">WhatsApp</div>
+                <div class="link-handle">Direct Instant Chat</div>
+            </div>
+            <div class="link-arrow">›</div>
+        </a>
+
+        <!-- Telegram -->
+        <a class="link-card" href="https://t.me/fahameduluddin" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+            </div>
+            <div class="link-texts">
+                <div class="link-title">Telegram</div>
+                <div class="link-handle">@fahameduluddin</div>
+            </div>
+            <div class="link-arrow">›</div>
+        </a>
+
+        <!-- LinkedIn -->
+        <a class="link-card" href="https://linkedin.com/in/fahameduluddin" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.7a1.6 1.6 0 1 0 1.6 1.6c0-.88-.72-1.6-1.6-1.6z"/></svg>
+            </div>
+            <div class="link-texts">
+                <div class="link-title">LinkedIn</div>
+                <div class="link-handle">Professional Network</div>
+            </div>
+            <div class="link-arrow">›</div>
+        </a>
+
+        <!-- Facebook -->
+        <a class="link-card" href="https://facebook.com/fahameduluddin" target="_blank" rel="noopener noreferrer">
+            <div class="link-icon-wrap">
+                <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </div>
+            <div class="link-texts">
+                <div class="link-title">Facebook</div>
+                <div class="link-handle">Personal Updates</div>
+            </div>
+            <div class="link-arrow">›</div>
+        </a>
+
+    </section>
+
+    <!-- MINI SOCIAL DOCK -->
+    <div class="social-dock">
+        <a href="https://x.com/fahamedul_uddin" target="_blank" rel="noopener noreferrer" title="X">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://wa.me/fahameduluddin" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+        </a>
+        <a href="https://t.me/fahameduluddin" target="_blank" rel="noopener noreferrer" title="Telegram">
+            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.75-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/fahameduluddin" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.7a1.6 1.6 0 1 0 1.6 1.6c0-.88-.72-1.6-1.6-1.6z"/></svg>
+        </a>
+        <a href="https://facebook.com/fahameduluddin" target="_blank" rel="noopener noreferrer" title="Facebook">
+            <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-text">
+        © 2026 <strong>Fahamedul Uddin</strong> (Fahim-EL)
+        <br>
+        Founder at <strong>Eorven Lab</strong>
+    </footer>
+
+</main>
+
+<!-- CLEAN QR MODAL -->
+<div class="modal-overlay" id="qr-modal">
+    <div class="modal-content">
+        <h3 style="font-family: var(--font-heading); font-size: 20px; color:#fff;">Scan to Connect</h3>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">Open camera to view this profile on mobile</p>
+        
+        <div class="qr-box">
+            <div id="qrcode"></div>
+        </div>
+
+        <button class="modal-close" id="close-qr-btn">Close</button>
+    </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast-msg" id="toast">Link copied to clipboard!</div>
+
+<!-- JAVASCRIPT LOGIC -->
+<script>
+/**
+ * 1. REAL FUNCTIONAL QR CODE
+ */
+let qrInitialized = false;
+const qrModal = document.getElementById('qr-modal');
+const openQrBtn = document.getElementById('qr-trigger-btn');
+const closeQrBtn = document.getElementById('close-qr-btn');
+
+openQrBtn.addEventListener('click', () => {
+    if (!qrInitialized) {
+        new QRCode(document.getElementById('qrcode'), {
+            text: window.location.href,
+            width: 160,
+            height: 160,
+            colorDark: "#080c0a",
+            colorLight: "#ffffff",
+            correctLevel: QRCode.CorrectLevel.H
+        });
+        qrInitialized = true;
+    }
+    qrModal.classList.add('active');
+});
+
+closeQrBtn.addEventListener('click', () => qrModal.classList.remove('active'));
+qrModal.addEventListener('click', (e) => {
+    if (e.target === qrModal) qrModal.classList.remove('active');
+});
+
+/**
+ * 2. NATURAL VOICE NOTE INTRO
+ */
+const voiceScript = "Hi there! Welcome to my personal hub. I'm Fahamedul Uddin, also known as Fahim-EL. I'm an entrepreneur and the founder of Eorven Lab. Feel free to explore my links and connect with me directly!";
+let isPlayingVoice = false;
+
+const voiceCard = document.getElementById('voice-card');
+const voiceBtn = document.getElementById('voice-btn');
+const voiceIcon = document.getElementById('voice-icon');
+const voiceBtnText = document.getElementById('voice-btn-text');
+const voiceStatusText = document.getElementById('voice-status-text');
+
+voiceBtn.addEventListener('click', () => {
+    if (!('speechSynthesis' in window)) {
+        showToast("Voice not supported on this browser.");
+        return;
+    }
+
+    if (isPlayingVoice) {
+        window.speechSynthesis.cancel();
+        resetVoice();
+    } else {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(voiceScript);
+        
+        const voices = window.speechSynthesis.getVoices();
+        // Select natural human English voice
+        const naturalVoice = voices.find(v => v.lang.includes('en') && (v.name.includes('Natural') || v.name.includes('Google') || v.name.includes('Daniel') || v.name.includes('Samantha'))) || voices[0];
+        if (naturalVoice) utterance.voice = naturalVoice;
+
+        utterance.rate = 1.0;
+        utterance.pitch = 1.0;
+
+        utterance.onstart = () => {
+            isPlayingVoice = true;
+            voiceCard.classList.add('playing');
+            voiceIcon.textContent = "■";
+            voiceBtnText.textContent = "Stop";
+            voiceStatusText.textContent = "Playing Introduction...";
+        };
+
+        utterance.onend = resetVoice;
+        utterance.onerror = resetVoice;
+
+        window.speechSynthesis.speak(utterance);
+    }
+});
+
+function resetVoice() {
+    isPlayingVoice = false;
+    voiceCard.classList.remove('playing');
+    voiceIcon.textContent = "▶";
+    voiceBtnText.textContent = "Listen";
+    voiceStatusText.textContent = "15s Audio Introduction";
+}
+
+/**
+ * 3. REAL-TIME DHAKA CLOCK (GMT+6)
+ */
+function updateDhakaTime() {
+    const now = new Date();
+    const options = {
+        timeZone: 'Asia/Dhaka',
+        hour12: false,
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit'
+    };
+    const time = new Intl.DateTimeFormat('en-GB', options).format(now);
+    document.getElementById('gmt-clock').textContent = `Dhaka • ${time} (GMT+6)`;
+}
+setInterval(updateDhakaTime, 1000);
+updateDhakaTime();
+
+/**
+ * 4. CLEAN SHARE FUNCTION
+ */
+async function shareProfile() {
+    const shareData = {
+        title: "Fahamedul Uddin (Fahim-EL)",
+        text: "Check out the official profile of Fahamedul Uddin — Founder of Eorven Lab.",
+        url: window.location.href
+    };
+
+    if (navigator.share) {
+        try {
+            await navigator.share(shareData);
+        } catch (e) {}
+    } else {
+        try {
+            await navigator.clipboard.writeText(window.location.href);
+            showToast("Profile link copied!");
+        } catch (err) {
+            const temp = document.createElement("input");
+            temp.value = window.location.href;
+            document.body.appendChild(temp);
+            temp.select();
+            document.execCommand("copy");
+            document.body.removeChild(temp);
+            showToast("Profile link copied!");
+        }
+    }
+}
+
+/**
+ * 5. CLEAN TOAST
+ */
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.textContent = msg;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 2200);
+}
+</script>
+
+</body>
+                                                                                    </html>
